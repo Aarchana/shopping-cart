@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+   
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<div id="itemparams"  ng-app="cartApp" ng-controller="itemsCart" >
+<form>
+
+
+ItemID:<input type="text"  ng-model="items.id" placeholder="enter the item ID"/><br /><br />
+Name :<input type="text"  ng-model="items.itemName" placeholder="enter item name"/><br /><br />
+Amount:<input type="text"  ng-model="items.amount" placeholder="enter the amount"/><br /><br />
+<input type="button" value="add" ng-click="add()">
+ 
+</form>
+
+
+
+  <p>itemList = {{items}}</p>
+<p>list:{{itemsToAdd}}</p>
+
+</div>
+
+</body>
+</html>
+

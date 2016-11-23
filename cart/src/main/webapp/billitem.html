@@ -1,0 +1,25 @@
+
+<code>Click the button to bill!!!</code>
+<br /><br /><br />
+<input type="button" ng-click="getBill()" value="Bill" />
+<div ng-show="myvalue" >
+
+
+<p> <mark>your cart <code>Bill</code></mark></p>                  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Amount</th>
+        <th>Tax</th>
+		<th>Bill</th>
+      </tr>
+    </thead>
+    <tbody>
+	    <tr class="danger">
+		  <td>{{billInfo.amt}}</td>
+		  <td>{{billInfo.tax }}</td>
+		  <td>{{billInfo.bill}}</td>
+		</tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bill Items</title>
+ <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+ 
+   
+    <script src="app.js"></script>
+    <script src="cart.js"></script>
+</head>
+<body>
+<div  ng-app="cartApp" ng-controller="billCart" >
+<form>
+<input type="button" value="calculateBill"  ng-click="bill()"/>
+
+			<p>Total Tax is {{bill.TotalTax}}</p>
+			<p>Total amount is {{bill.TotalAmount}}</p>
+			<p>Total bill to be payed {{bill.TotalBill}}</p>
+	</form>	
+</div>
+</body>
+</html>

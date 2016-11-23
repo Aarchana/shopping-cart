@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-md-3">
+  <form >
+    Item id:<br>
+    <input type="text" ng-model="item.id " required><br>
+   Item Name:<br>
+    <input type="text" ng-model="item.itemName " required>
+    <br>
+Amount:<br>
+    <input type="text" ng-model="item.amount" required>
+    <br><br>
+    <button ng-click="add()" class="btn btn-primary">add</button>
+   
+  </form>
+  </div>
+  
+ 
+  
+  <div class="col-md-5" ng-show="myValue" >
+
+ 
+  <p>Items added to <mark>cart</mark></p>                  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ITEM NAME</th>
+		<th>AMOUNT</th>
+      </tr>
+    </thead>
+    <tbody>
+	    <tr ng-repeat="x in items" class="warning">
+		  <td>{{x.id}}</td>
+		  <td>{{x.itemName}}</td>
+		  <td>{{x.amount}}</td>
+		</tr>
+    </tbody>
+  </table>
+   <button ng-click="confirmAdd()" class="btn btn-success">confirm add</button>
+    <button ng-click="clear()">clear items</button>
+  </div>
+
+  
+   <div class="col-md-4" ng-show="value" >
+
+ 
+  <p>Items added to <mark>cart</mark></p>                  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ITEM NAME</th>
+		<th>AMOUNT</th>
+      </tr>
+    </thead>
+    <tbody>
+	    <tr ng-repeat="x in responseData" class="success">
+		  <td>{{x.id}}</td>
+		  <td>{{x.itemName}}</td>
+		  <td>{{x.amount}}</td>
+		</tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
